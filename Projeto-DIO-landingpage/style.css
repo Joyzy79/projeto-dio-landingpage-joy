@@ -1,0 +1,199 @@
+@import url('reset.css');
+
+:root {
+  --primary: #33A8DB;
+  --primary-2: #31A8DD;
+  --primary-80: #33A8DB80;
+  --text: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: rgba(27, 62, 160, 0.74);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  line-height: 1.5;
+}
+
+a { color: var(--primary); text-decoration: none; }
+
+h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+header.banner {
+  padding: 60px 16px 40px;
+  border-bottom: 1px solid var(--primary-80);
+  text-align: center;
+}
+
+.banner .banner-content {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.banner .logo {
+  background-color: rgba(0, 0, 0, .2);
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+}
+
+.banner .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.banner-hero {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+.banner h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #33A8DB, #31A8DD, #33A8DB);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.banner p {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  margin: 16px 0 24px;
+  max-width: 760px;
+}
+
+.banner .banner-content button {
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 100%;
+  max-width: 530px;
+  margin: 0 auto 24px;
+  border: 1px solid var(--primary);
+  background-color: #252525;
+  padding: 16px 32px;
+  border-radius: 100px;
+  box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
+  cursor: pointer;
+  transition: transform .05s ease, box-shadow .2s ease;
+}
+
+.banner .banner-content button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(0,0,0,.25), inset -5px 6px 8px rgba(0, 0, 0, .7);
+}
+
+section {
+  background-repeat: no-repeat;
+  padding: 60px 16px;
+  border-bottom: 1px solid var(--primary-80);
+  text-align: center;
+}
+
+#course-content p {
+  max-width: 800px;
+  margin: 16px auto 32px;
+}
+
+.modules-list {
+  display: grid;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.module {
+  padding: 16px;
+  border: 1px solid var(--primary-80);
+  background: rgba(0, 0, 0, .25);
+  border-radius: 12px;
+}
+
+#course-content .modules-list .module span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+#transform-world {
+  min-height: 560px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("assets/woman-code.png");
+  background-attachment: fixed;
+  border-top: 1px solid var(--primary-80);
+  border-bottom: 1px solid var(--primary-80);
+  display: grid;
+  place-items: center;
+  padding: 200px 16px;
+}
+
+#transform-world p {
+  color: #fff;
+  font-size: clamp(1.6rem, 4.5vw, 3rem);
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+}
+
+#professional-challenges {
+  text-align: center;
+}
+
+#professional-challenges .content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#professional-challenges img {
+  margin: 32px 0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+footer {
+  padding: 60px 16px;
+  text-align: center;
+  background-image: linear-gradient(rgba(50, 168, 219, 0), rgba(50, 168, 219, .2));
+  border-top: 1px solid var(--primary-80);
+}
+
+footer .dio-logo {
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+}
+
+footer a {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .banner .logo { width: 200px; height: 200px; }
+  .banner .banner-content button { padding: 14px 24px; }
+}
